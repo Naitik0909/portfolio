@@ -28,7 +28,7 @@ SECRET_KEY = 'j2g(hr2xbl3dw!a0)ij%utzjtgw9g*%9g-#ovrs#u*v*l7^c@*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = socket.gethostname() == 'LAPTOP-KSPUN68R'
 
-ALLOWED_HOSTS = ['ec2-13-127-196-25.ap-south-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-52-66-86-24.ap-south-1.compute.amazonaws.com']
 
 
 # Application definition
