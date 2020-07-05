@@ -4,10 +4,6 @@
 buttons, no circle */
 body { font-family: sans-serif; }
 
-.carousel {
-  background: #40E0D0;
-}
-
 .carousel-cell {
   width: 70%;
   height: 200px;

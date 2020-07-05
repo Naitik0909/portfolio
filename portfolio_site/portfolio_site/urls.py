@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name="index"),
     path('projects/', views.projects, name="projects"),
+    path('cv/', views.cv, name="cv"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

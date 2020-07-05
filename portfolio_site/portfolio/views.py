@@ -14,3 +14,6 @@ def projects(request):
         'dict':images
     }
     return render(request, "projects-compact-grid.html", context)
+
+def cv(request):
+    return render(request, "cv.html")

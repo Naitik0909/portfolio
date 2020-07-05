@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
-    <main class="page projets-page" style="background-color: #40E0D0">
+    <main class="page projets-page" style="background-image:url('{% static 'assets/img/portfolio/background.jpeg' %}');">
         <section class="portfolio-block projects compact-grid">
-            <div class="heading">
+            <div class="heading" style="color: white; margin-bottom:20px;">
                 <h2>Recent Work</h2>
+            </div>
+
+            <div class="text-center" style="color:white; margin-bottom: 40px;">
+              <p>My idea of design lies in riddles where puzzles are still to be solved.</p>
             </div>
           <!-- <div class="row no-gutters">
                 <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/portfolio/img1.jpeg"><span class="description"><span class="description-heading">Lorem Ipsum</span><span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span></a></div>

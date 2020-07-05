@@ -4,7 +4,7 @@
 }
 
 .special-skill-item{
-  background-color: turquoise;
+  background-color: rgba(255,255,255,0);
 }
 
 .portfolio-block{
@@ -16,6 +16,13 @@
 
 }
 
+.heading{
+  font-family: 'Bangers';letter-spacing: 4px;font-size: 40px;
+}
+
+.card-title{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 /* #fb{
   background-color: #3B5998;
   opacity: 0.75;
