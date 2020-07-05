@@ -18,10 +18,12 @@ from django.urls import path
 from portfolio import views
 from django.conf import settings
 from django.conf.urls.static import static
+from portfolio.views import HireMe
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name="index"),
     path('projects/', views.projects, name="projects"),
     path('cv/', views.cv, name="cv"),
+    path('hire-me/', HireMe.as_view(), name="hire_me")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

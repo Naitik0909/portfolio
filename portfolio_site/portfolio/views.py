@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from portfolio.models import HomepageImages, Gallery
+from django.views.generic import TemplateView, ListView, DetailView, View
+from portfolio.models import HireForm
 
 def homepage(request):
     images = HomepageImages.objects.all()
@@ -17,3 +19,23 @@ def projects(request):
 
 def cv(request):
     return render(request, "cv.html")
+
+def hire_me(request):
+    return render(request, "hire-me.html")
+
+class HireMe(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "hire-me.html")
+
+    def post(self, request, *args, **kwargs):
+        if request.method == "POST":
+            form = request.POST
+            entry = HireForm(
+                phone=form.get('phone'),
+                email=form.get('email'),
+                description=form.get('message')
+            )
+            print(form.get('message'))
+            entry.save()
+
+        return render(request, "index.html")
