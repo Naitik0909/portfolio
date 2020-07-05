@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import socket
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,9 +26,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, "media")
 SECRET_KEY = 'j2g(hr2xbl3dw!a0)ij%utzjtgw9g*%9g-#ovrs#u*v*l7^c@*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = socket.gethostname() == 'LAPTOP-KSPUN68R'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-13-127-196-25.ap-south-1.compute.amazonaws.com']
 
 
 # Application definition
