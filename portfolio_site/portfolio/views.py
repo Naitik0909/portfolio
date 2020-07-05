@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from portfolio.models import HomepageImages
+from portfolio.models import HomepageImages, Gallery
 
 def homepage(request):
     images = HomepageImages.objects.all()
@@ -9,4 +9,8 @@ def homepage(request):
     return render(request, "index.html", context)
 
 def projects(request):
-    return render(request, "projects-compact-grid.html")
+    images = Gallery.objects.all()
+    context = {
+        'dict':images
+    }
+    return render(request, "projects-compact-grid.html", context)

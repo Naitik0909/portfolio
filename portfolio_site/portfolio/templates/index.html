@@ -1,41 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
+{% block body_block %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
-    <!--CAROUSEL CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-</head>
-
-<body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="hire-me.html">Hire me</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <main class="page lanidng-page">
         <section class="portfolio-block block-intro">
             <div class="container">
-                <div class="avatar" style="background-image:url(&quot;assets/img/portfolio/profile-pic.jpeg&quot;);"></div>
+                <div class="avatar" style="background-image:url(&quot;{% static 'assets/img/portfolio/profile-pic.jpeg' %}&quot;);
+                border: black solid 2px;"></div>
                 <div class="about-me" style="font-family: 'Yanone Kaffeesatz', sans-serif;">
                   <p style="font-family: 'Bangers', cursive;">Mirages drives me to illusion. Vision leads me to emotions.<br>
                     If one word defines me, then it has to be <strong>audacity.</strong>
@@ -115,23 +87,5 @@
             </div>
         </div>
     </section> -->
-    <footer class="page-footer portfolio-block website gradient">
-        <div class="container">
-            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
-            <div class="social-icons"><a id="fb" href="#"><i class="icon ion-social-facebook"></i></a>
-              <a id="insta" href="#">
-              <i class="icon ion-social-instagram-outline"></i></a>
-              <a id="linkedin" href="#">
-                <i class="icon ion-social-linkedin"></i></a></div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="{% static 'assets/js/script.min.js' %}"></script>
-    <!-- Carousel JavaScript -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="{% static 'assets/js/script.js' %}"></script>
-</body>
 
-</html>
+    {% endblock %}

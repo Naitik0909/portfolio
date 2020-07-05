@@ -1,3 +1,21 @@
+
+.lanidng-page{
+  background-color: turquoise;
+}
+
+.special-skill-item{
+  background-color: turquoise;
+}
+
+.portfolio-block{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.avatar{
+
+}
+
 /* #fb{
   background-color: #3B5998;
   opacity: 0.75;
@@ -12,17 +30,3 @@
   background-color: #0077B5;
   opacity: 0.75;
 } */
-
-
-.lanidng-page{
-  background-color: turquoise;
-}
-
-.special-skill-item{
-  background-color: turquoise;
-}
-
-.portfolio-block{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
