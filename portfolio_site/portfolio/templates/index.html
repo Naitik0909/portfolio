@@ -6,7 +6,7 @@
     <main class="page lanidng-page" style="background-image: url('{% static 'assets/img/portfolio/background.jpeg' %}');">
         <section class="portfolio-block block-intro">
             <div class="container">
-                <div class="avatar" style="background-image:url(&quot;{% static 'assets/img/portfolio/profile-pic.jpeg' %}&quot;);
+                <div class="avatar" style="background-image:url(&quot;{{ profile_object.profile_pic.url }}&quot;);
                 border: white solid 2px;"></div>
                 <div class="about-me" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
                   <p style="font-family: 'Bangers', cursive;">Mirages drives me to illusion. Vision leads me to emotions.<br>

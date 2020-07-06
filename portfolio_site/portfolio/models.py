@@ -14,3 +14,7 @@ class HireForm(models.Model):
     phone = models.PositiveIntegerField()
     email = models.EmailField()
     description = models.CharField(max_length=1000)
+
+class ProfilePic(models.Model):
+    profile_pic = models.ImageField()
+    use_me_as_profile = models.BooleanField(default=False)

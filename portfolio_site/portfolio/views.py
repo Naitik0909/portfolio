@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from portfolio.models import HomepageImages, Gallery
+from portfolio.models import HomepageImages, Gallery, ProfilePic
 from django.views.generic import TemplateView, ListView, DetailView, View
 from portfolio.models import HireForm
 
 def homepage(request):
     images = HomepageImages.objects.all()
+    profile_object = ProfilePic.objects.get(use_me_as_profile=True)
     context = {
-        'dict':images
+        'dict':images,
+        'profile_object':profile_object,
     }
     return render(request, "index.html", context)
 
